@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:ap-northeast-2:860061945305:task-definition/authorization-ms:1"
+        LoadBalancerInfo:
+          ContainerName: "authorization-microservice-klp"
+          ContainerPort: "8007"
+        PlatformVersion: "LATEST"
